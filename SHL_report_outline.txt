@@ -1,0 +1,115 @@
+SHL_AI_Intern_Assignment - 2-Page PDF Report Draft Guide
+
+This file is meant to help you write a complete 2-page PDF report that is clear, specific, and still short enough to fit the assignment limit. Use it as a draft structure, not as raw notes. The strongest report will explain what the system does, how it works, how it was evaluated, and what still needs improvement.
+
+1. Project Summary
+- The project is a conversational SHL assessment recommender.
+- A user describes a hiring need such as role, level, target skills, constraints, or follow-up edits.
+- The system returns a grounded shortlist of SHL assessments and a short explanation of why they fit.
+- It is designed for multi-turn hiring workflows, so the user can refine, compare, add, or remove tests in later turns.
+
+Use in the report:
+- Start with 3 to 4 sentences that explain the goal in plain language.
+- Mention that the assistant helps hiring teams choose assessments faster while keeping suggestions tied to the SHL catalog.
+
+2. Problem Statement
+- The core problem is not just retrieval, but selection: the assistant must recommend the right assessment set for a role.
+- It must stay grounded in SHL products and avoid invented recommendations.
+- It must support realistic recruiter behavior, including vague requests, follow-up refinements, comparisons, and refusals for off-topic or unsafe prompts.
+- It also needs to balance precision and recall, because a short shortlist should be relevant without being noisy.
+
+Use in the report:
+- Explain that the assignment is about recommending assessments that are both relevant and defensible.
+- Emphasize that the system should answer in a helpful conversational style rather than only returning search results.
+
+3. Solution Overview
+- The backend is a FastAPI app with `/health` and `/chat` endpoints.
+- The agent reads the full conversation history on each request, so it can handle follow-ups without session state.
+- Retrieval is hybrid: BM25 handles keyword matching, FAISS handles semantic similarity, and reciprocal rank fusion combines the two rankings.
+- The agent then shortlists the strongest results, formats them into the expected response schema, and adds a short natural-language explanation.
+- Guardrails block off-topic requests and prompt-injection style instructions.
+
+Use in the report:
+- Describe the architecture at a high level, then briefly explain why hybrid retrieval is useful.
+- If space allows, mention that the system was built to keep responses deterministic enough for evaluation while still being conversational.
+
+4. Evaluation Approach
+- Hard evaluation checks basic correctness and safety: schema compliance, valid recommendation counts, catalog-only recommendations, and turn-cap compliance.
+- Retrieval quality is measured with Recall@10, Precision@10, MRR@10, and nDCG@10.
+- Recommendation relevance is scored using Precision@10, Recall@10, F1@10, hit rate, and exact match against the expected shortlist.
+- Groundedness measures whether the recommendations are aligned with the catalog, supported by retrieval, and reflected in the reply text.
+- Behavior probes test whether the assistant clarifies vague requests, refuses off-topic or unsafe prompts, respects language constraints, handles refinement, and answers comparison questions.
+
+Use in the report:
+- State that the evaluator is not only checking one metric; it looks at format, retrieval, recommendation quality, and conversational behavior.
+- Mention that the evaluation is replay-based on public traces from the assignment.
+
+5. Current Results
+- Traces evaluated: 10
+- Hard eval pass rate: 1.0
+- Mean schema compliance rate: 1.0
+- Mean retrieval Recall@10: 0.5369
+- Mean retrieval MRR@10: 0.3934
+- Mean recommendation Precision@10: 0.2158
+- Mean recommendation Recall@10: 0.5369
+- Mean recommendation F1@10: 0.299
+- Mean groundedness: 0.8257
+- Behavior probe pass rate: 0.6667
+- Mean overall accuracy: 0.4299
+- Mean overall effectiveness: 0.5649
+
+Use in the report:
+- Present these numbers in a small table or compact bullet list.
+- Highlight the strongest results first: hard evals and groundedness.
+- Then mention the weaker area: recommendation precision and some behavior probes.
+
+6. Interpretation
+- The system is strong on compliance and grounding.
+- A hard eval pass rate of 1.0 shows that the output format and catalog constraints are being met reliably.
+- A groundedness score above 0.8 suggests the assistant usually ties its answers back to retrieved SHL items.
+- Retrieval recall is moderate, which means the system often finds relevant items but does not always rank the best ones at the top.
+- Recommendation precision is the main weakness, so the shortlist sometimes includes extra items beyond the best matches.
+- The behavior probe score shows that the assistant is mostly functional, but not perfect in conversation management.
+
+Use in the report:
+- Write 1 short paragraph explaining what the numbers mean in practical terms.
+- Do not just repeat the metrics; interpret them.
+
+7. Limitations
+- The evaluator uses public trace shortlists as relevance labels, so the metrics measure agreement with those traces rather than absolute human judgment.
+- Some behavior probes still fail, especially clarification for vague first-turn requests and refinement handling for add/drop instructions.
+- Retrieval and ranking metrics are useful signals, but they do not fully capture whether a recruiter would consider the answer ideal in practice.
+
+Use in the report:
+- Be honest and brief.
+- Frame limitations as evaluation and ranking gaps rather than project failure.
+
+8. Future Improvements
+- Improve clarification behavior when the first request is too vague.
+- Strengthen refinement logic so add/drop instructions affect the shortlist more reliably.
+- Increase precision without reducing recall too much.
+- Add more targeted probes for follow-up intent, comparison intent, and shortlist trimming.
+
+Use in the report:
+- End with 3 or 4 concrete next steps.
+- Keep them realistic and tied to the measured weaknesses.
+
+9. Submission Checklist
+- Include the source code.
+- Include the 2-page PDF report.
+- Mention the architecture, evaluation method, and final results.
+- Mention the saved evaluator output in backend/eval-report.json.
+- Keep the final PDF readable, concise, and well structured.
+
+Suggested final PDF layout:
+- Title
+- One short overview paragraph
+- Architecture and approach
+- Evaluation results table
+- Short interpretation paragraph
+- Limitations and future work
+
+Suggested wording style:
+- Use direct, plain English.
+- Avoid overly technical jargon unless you define it.
+- Keep the report focused on what was built, how it works, and how it performed.

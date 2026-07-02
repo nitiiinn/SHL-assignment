@@ -14,8 +14,6 @@ venv/
 
 # Data (large files)
 
-example traces
-
 # OS
 .DS_Store
 Thumbs.db
