@@ -1,0 +1,616 @@
+{
+  "summary": {
+    "traces_evaluated": 10,
+    "hard_eval_pass_rate": 1.0,
+    "mean_schema_compliance_rate": 1.0,
+    "mean_retrieval_recall_at_10": 0.5369,
+    "mean_retrieval_mrr_at_10": 0.3934,
+    "mean_recommendation_precision_at_10": 0.2158,
+    "mean_recommendation_recall_at_10": 0.5369,
+    "mean_recommendation_f1_at_10": 0.299,
+    "mean_groundedness": 0.8257,
+    "behavior_probe_pass_rate": 0.6667,
+    "mean_turn_efficiency": 0.6,
+    "mean_overall_accuracy": 0.4299,
+    "mean_overall_effectiveness": 0.5649
+  },
+  "trace_results": [
+    {
+      "trace_id": "C1",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.1,
+        "recall_at_10": 0.3333,
+        "f1_at_10": 0.1538,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.1429,
+        "ndcg_at_10": 0.1564
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.1,
+        "recall_at_10": 0.3333,
+        "f1_at_10": 0.1538,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.1429,
+        "ndcg_at_10": 0.1564
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.5,
+        "groundedness_score": 0.8333
+      },
+      "turn_efficiency": 0.5714,
+      "conversation_completion": false,
+      "overall_accuracy": 0.2555,
+      "overall_effectiveness": 0.5199,
+      "final_query": "Perfect, that's what we need. \nThe pool consists of CXOs, director-level postions; people with more than 15 years of experience. Selection \u2014 comparing candidates against a leadership benchmark. \nWe need a solution for senior leadership. The pool consists of CXOs, director-level postions; people with more than 15 years of experience. Selection \u2014 comparing candidates against a leadership benchmark. Perfect, that's what we need. senior executive director lead",
+      "expected_final_recommendations": [
+        "Occupational Personality Questionnaire OPQ32r",
+        "OPQ Universal Competency Report 2.0",
+        "OPQ Leadership Report"
+      ],
+      "actual_final_recommendations": [
+        "Executive Scenarios Profile Report",
+        "Executive Scenarios Narrative Report",
+        "Executive Scenarios",
+        "Enterprise Leadership Report 1.0",
+        "Enterprise Leadership Report 2.0",
+        "PJM Selection Report",
+        "OPQ Leadership Report",
+        "OPQ Team Types and Leadership Styles Report",
+        "OPQ Team Types & Leadership Styles Profile",
+        "Customer Service Phone Solution"
+      ]
+    },
+    {
+      "trace_id": "C2",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "f1_at_10": 0.0,
+        "hit_rate": 0.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.0,
+        "recall_at_10": 0.0,
+        "f1_at_10": 0.0,
+        "hit_rate": 0.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.625,
+        "groundedness_score": 0.875
+      },
+      "turn_efficiency": 0.7143,
+      "conversation_completion": false,
+      "overall_accuracy": 0.0,
+      "overall_effectiveness": 0.4964,
+      "final_query": "That works. Thanks. \nI'm hiring a senior Rust engineer for high-performance networking infrastructure. What assessments should I use? Yes, go ahead. Should I also add a cognitive test for this level? \nI'm hiring a senior Rust engineer for high-performance networking infrastructure. What assessments should I use? Yes, go ahead. Should I also add a cognitive test for this level? That works. Thanks. senior executive director lead ability aptitude cognitive reasoning",
+      "expected_final_recommendations": [
+        "Smart Interview Live Coding",
+        "Linux Programming (General)",
+        "Networking and Implementation (New)",
+        "SHL Verify Interactive G+",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "actual_final_recommendations": [
+        "Verify - Deductive Reasoning",
+        "Verify - Inductive Reasoning (2014)",
+        "Verify - Numerical Ability",
+        "Multitasking Ability",
+        "Verify - Verbal Ability - Next Generation",
+        "Verify G+ - Ability Test Report",
+        "SHL Verify Interactive - Inductive Reasoning",
+        "Verify Interactive Ability Report"
+      ]
+    },
+    {
+      "trace_id": "C3",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.75,
+        "f1_at_10": 0.4286,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.3333,
+        "ndcg_at_10": 0.4574
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.75,
+        "f1_at_10": 0.4286,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.3333,
+        "ndcg_at_10": 0.4574
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.5,
+        "groundedness_score": 0.8333
+      },
+      "turn_efficiency": 0.4286,
+      "conversation_completion": false,
+      "overall_accuracy": 0.6,
+      "overall_effectiveness": 0.5881,
+      "final_query": "Perfect \u2014 new simulation for volume, old solution for finalists. Confirmed. \nUS. Is the Contact Center Call Simulation different from the Customer Service Phone Simulation? \nWe're screening 500 entry-level contact centre agents. Inbound calls, customer service focus. What should we use? English. US. Is the Contact Center Call Simulation different from the Customer Service Phone Simulation? Perfect \u2014 new simulation for volume, old solution for finalists. Confirmed. entry-level graduate",
+      "expected_final_recommendations": [
+        "SVAR Spoken English (US) (New)",
+        "Contact Center Call Simulation (New)",
+        "Entry Level Customer Serv - Retail & Contact Center",
+        "Customer Service Phone Simulation"
+      ],
+      "actual_final_recommendations": [
+        "Sales & Service Phone Simulation",
+        "Sales & Service Phone Solution",
+        "Entry Level Customer Serv-Retail & Contact Center",
+        "Entry Level Customer Service (General) Solution",
+        "WriteX - Email Writing (Customer Service) (New)",
+        "Customer Service Phone Simulation",
+        "Customer Service Phone Solution",
+        "Contact Center Call Simulation (New)",
+        "Entry Level Hotel Front Desk Solution",
+        "Entry Level Technical Support Solution"
+      ]
+    },
+    {
+      "trace_id": "C4",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.6,
+        "f1_at_10": 0.4,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.3333,
+        "ndcg_at_10": 0.3925
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.6,
+        "f1_at_10": 0.4,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.3333,
+        "ndcg_at_10": 0.3925
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.5,
+        "groundedness_score": 0.8333
+      },
+      "turn_efficiency": 0.7143,
+      "conversation_completion": false,
+      "overall_accuracy": 0.5,
+      "overall_effectiveness": 0.6081,
+      "final_query": "That covers it. Numerical + Graduate Scenarios as first filter, domain tests for shortlisted candidates. \nHiring graduate financial analysts \u2014 final-year students, no work experience. We need numerical reasoning and a finance knowledge test. Good. Can you also add a situational judgement element \u2014 work-context decision making for graduates? \nHiring graduate financial analysts \u2014 final-year students, no work experience. We need numerical reasoning and a finance knowledge test. Good. Can you also add a situational judgement element \u2014 work-context decision making for graduates? That covers it. Numerical + Graduate Scenarios as first filter, domain tests for shortlisted candidates. entry-level graduate ability aptitude cognitive reasoning knowledge skills technical coding",
+      "expected_final_recommendations": [
+        "SHL Verify Interactive \u2013 Numerical Reasoning",
+        "Financial Accounting (New)",
+        "Basic Statistics (New)",
+        "Graduate Scenarios",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "actual_final_recommendations": [
+        "Verify - Numerical Ability",
+        "Graduate Scenarios Profile Report",
+        "Graduate Scenarios",
+        "Graduate Scenarios Narrative Report",
+        "Verify - Deductive Reasoning",
+        "SHL Verify Interactive \u2013 Numerical Reasoning",
+        "Entry Level Technical Support Solution",
+        "SHL Verify Interactive Numerical Calculation",
+        "Financial Accounting (New)",
+        "Verify - Technical Checking - Next Generation"
+      ]
+    },
+    {
+      "trace_id": "C5",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.6,
+        "f1_at_10": 0.4,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 0.5621
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.6,
+        "f1_at_10": 0.4,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 0.5621
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.3,
+        "groundedness_score": 0.7667
+      },
+      "turn_efficiency": 0.7143,
+      "conversation_completion": false,
+      "overall_accuracy": 0.5,
+      "overall_effectiveness": 0.5948,
+      "final_query": "Clear. We\u2019ll use OPQ for everyone and add MQ only where we want motivators in the Sales Report; keeping the five solutions as our audit stack. \nAs part of our restructuring and annual talent audit, we need to re-skill our Sales organization. What solutions do you recommend? What\u2019s the difference between OPQ and OPQ MQ Sales Report? \nAs part of our restructuring and annual talent audit, we need to re-skill our Sales organization. What solutions do you recommend? What\u2019s the difference between OPQ and OPQ MQ Sales Report? Clear. We\u2019ll use OPQ for everyone and add MQ only where we want motivators in the Sales Report; keeping the five solutions as our audit stack. global skills assessment global skills development report development 360 reskilling sales transformation sales manager individual contributor opq personality personality behavior knowledge skills technical coding",
+      "expected_final_recommendations": [
+        "Global Skills Assessment",
+        "Global Skills Development Report",
+        "Occupational Personality Questionnaire OPQ32r",
+        "OPQ MQ Sales Report",
+        "Sales Transformation 2.0 - Individual Contributor"
+      ],
+      "actual_final_recommendations": [
+        "OPQ MQ Sales Report",
+        "OPQ UCF Development Action Planner Report 1.0",
+        "OPQ Manager Plus Report",
+        "Sales Transformation 1.0 - Individual Contributor",
+        "OPQ Manager Plus Report 2.0",
+        "Sales Transformation 2.0 - Individual Contributor",
+        "OPQ UCF Development Action Planner Report 2.0",
+        "OPQ Team Impact Group Development Report",
+        "Global Skills Development Report",
+        "Sales Transformation Report 1.0 - Sales Manager"
+      ]
+    },
+    {
+      "trace_id": "C6",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "f1_at_10": 0.3333,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 0.8066
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.2857,
+        "recall_at_10": 1.0,
+        "f1_at_10": 0.4444,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 0.8175
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.7143,
+        "groundedness_score": 0.9048
+      },
+      "turn_efficiency": 0.7143,
+      "conversation_completion": false,
+      "overall_accuracy": 0.7619,
+      "overall_effectiveness": 0.6357,
+      "final_query": "We're industrial. The 8.0 bundle is the right fit. Confirmed. \nWe're hiring plant operators for a chemical facility. Safety is absolute top priority \u2014 reliability, procedure compliance, never cutting corners. What do you recommend? What's the difference between the DSI and the Safety & Dependability 8.0? \nWe're hiring plant operators for a chemical facility. Safety is absolute top priority \u2014 reliability, procedure compliance, never cutting corners. What do you recommend? What's the difference between the DSI and the Safety & Dependability 8.0? We're industrial. The 8.0 bundle is the right fit. Confirmed.",
+      "expected_final_recommendations": [
+        "Manufac. & Indust. - Safety & Dependability 8.0",
+        "Workplace Health and Safety (New)"
+      ],
+      "actual_final_recommendations": [
+        "Manufac. & Indust. - Safety & Dependability 8.0",
+        "Dependability and Safety Instrument (DSI)",
+        "Manufacturing & Industrial - Vigilance Focus 8.0",
+        "Manufacturing & Industrial - Essential Focus 8.0",
+        "Manufacturing & Industrial - Mechanical Focus 8.0",
+        "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+        "Workplace Health and Safety (New)"
+      ]
+    },
+    {
+      "trace_id": "C7",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.1,
+        "recall_at_10": 0.2,
+        "f1_at_10": 0.1333,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.3333,
+        "ndcg_at_10": 0.1696
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.1,
+        "recall_at_10": 0.2,
+        "f1_at_10": 0.1333,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.3333,
+        "ndcg_at_10": 0.1696
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.3,
+        "groundedness_score": 0.7667
+      },
+      "turn_efficiency": 0.5714,
+      "conversation_completion": false,
+      "overall_accuracy": 0.1667,
+      "overall_effectiveness": 0.5005,
+      "final_query": "Understood. Keep the shortlist as-is. \nThey're functionally bilingual \u2014 English fluent for written work. Go with the hybrid. Are we legally required under HIPAA to test all staff who touch patient records? And does this SHL test satisfy that requirement? \nWe're hiring bilingual healthcare admin staff in South Texas \u2014 they handle patient records and need to be assessed in Spanish. HIPAA compliance is critical. What assessments work? They're functionally bilingual \u2014 English fluent for written work. Go with the hybrid. Are we legally required under HIPAA to test all staff who touch patient records? And does this SHL test satisfy that requirement? Understood. Keep the shortlist as-is.",
+      "expected_final_recommendations": [
+        "HIPAA (Security)",
+        "Medical Terminology (New)",
+        "Microsoft Word 365 - Essentials (New)",
+        "Dependability and Safety Instrument (DSI)",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "actual_final_recommendations": [
+        "What Is The Value - US",
+        "SHL Verify Interactive G+",
+        "HIPAA (Security)",
+        "SVAR - Spoken English (AUS)",
+        "SVAR - Spoken English (US) (New)",
+        "SVAR - Spoken English (U.K.)",
+        "SVAR - Spoken English (Indian Accent) (New)",
+        "Reading Comprehension - Spanish v1",
+        "SVAR - Spoken Spanish (North American) (New)",
+        "SVAR - Spoken Spanish (Castilian) (New)"
+      ]
+    },
+    {
+      "trace_id": "C8",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.6,
+        "f1_at_10": 0.4,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.1667,
+        "ndcg_at_10": 0.3409
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.3,
+        "recall_at_10": 0.6,
+        "f1_at_10": 0.4,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.1667,
+        "ndcg_at_10": 0.3409
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.5,
+        "groundedness_score": 0.8333
+      },
+      "turn_efficiency": 0.7143,
+      "conversation_completion": false,
+      "overall_accuracy": 0.5,
+      "overall_effectiveness": 0.6081,
+      "final_query": "That's good. \nI need to quickly screen admin assistants for Excel and Word daily. In that case, I am OK with adding a simulation - we want to capture the capabilties. \nI need to quickly screen admin assistants for Excel and Word daily. In that case, I am OK with adding a simulation - we want to capture the capabilties. That's good.",
+      "expected_final_recommendations": [
+        "Microsoft Excel 365 (New)",
+        "Microsoft Word 365 (New)",
+        "MS Excel (New)",
+        "MS Word (New)",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "actual_final_recommendations": [
+        "Retail Sales and Service Simulation",
+        "Sales & Service Phone Simulation",
+        "Customer Service Phone Simulation",
+        "Microsoft Excel 365 - Essentials (New)",
+        "Microsoft Word 365 - Essentials (New)",
+        "Microsoft Word 365 (New)",
+        "MS Excel (New)",
+        "MS Word (New)",
+        "Contact Center Call Simulation (New)",
+        "Data Entry Alphanumeric Split Screen - US"
+      ]
+    },
+    {
+      "trace_id": "C9",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.2,
+        "recall_at_10": 0.2857,
+        "f1_at_10": 0.2353,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.5,
+        "ndcg_at_10": 0.2918
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.25,
+        "recall_at_10": 0.2857,
+        "f1_at_10": 0.2667,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.5,
+        "ndcg_at_10": 0.3109
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.5,
+        "groundedness_score": 0.8333
+      },
+      "turn_efficiency": 0.1429,
+      "conversation_completion": false,
+      "overall_accuracy": 0.2738,
+      "overall_effectiveness": 0.511,
+      "final_query": "Keep Verify G+. Locking it in. \nOn Java \u2014 they'd be working on existing services, not greenfield. Is the Advanced level the right pick? Do we really need Verify G+ on top of all the technical tests? Feels redundant. \nHere's the JD for an engineer we need to fill. Can you recommend an assessment battery?\n\n\"Senior Full-Stack Engineer \u2014 5+ years across Core Java, Spring, REST API design, Angular, SQL/relational databases, AWS deployment, and Docker. Will own end-to-end microservice delivery, contribute to architectural decisions, and mentor mid-level engineers. Strong CI/CD and cloud-native experience required.\" Backend-leaning. Day-one priorities are Core Java and Spring; SQL is constant. Angular is occasional \u2014 they'd review frontend PRs but not own features. Senior IC. They lead design on their own services but don't manage other engineers directly. Add AWS and Docker. Drop REST \u2014 the API design signal will already come through in Spring and the live interview. On Java \u2014 they'd be working on existing services, not greenfield. Is the Advanced level the right pick? Do we really need Verify G+ on top of all the technical tests? Feels redundant. Keep Verify G+. Locking it in. mid-professional senior executive director lead knowledge skills technical coding docker aws angular spring sql restful microservices cloud cicd devops",
+      "expected_final_recommendations": [
+        "Core Java (Advanced Level) (New)",
+        "Spring (New)",
+        "SQL (New)",
+        "Amazon Web Services (AWS) Development (New)",
+        "Docker (New)",
+        "SHL Verify Interactive G+",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "actual_final_recommendations": [
+        "Smart Interview Live Coding",
+        "Core Java (Advanced Level) (New)",
+        "Amazon Web Services (AWS) Development (New)",
+        "Java Design Patterns (New)",
+        "Java Web Services (New)",
+        "Smart Interview Live",
+        "Java Platform Enterprise Edition 7 (Java EE 7)",
+        "Verify - Technical Checking - Next Generation"
+      ]
+    },
+    {
+      "trace_id": "C10",
+      "hard_evals": {
+        "schema_compliance_rate": 1.0,
+        "catalog_grounding_rate": 1.0,
+        "recommendation_count_valid_rate": 1.0,
+        "turn_cap_honored": true,
+        "hard_pass": true
+      },
+      "retrieval_metrics": {
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "f1_at_10": 0.3333,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.125,
+        "ndcg_at_10": 0.3707
+      },
+      "recommendation_metrics": {
+        "precision_at_10": 0.2222,
+        "recall_at_10": 1.0,
+        "f1_at_10": 0.3636,
+        "hit_rate": 1.0,
+        "exact_match": 0.0,
+        "mrr_at_10": 0.1429,
+        "ndcg_at_10": 0.389
+      },
+      "groundedness": {
+        "catalog_alignment": 1.0,
+        "retrieval_support": 1.0,
+        "reply_alignment": 0.3333,
+        "groundedness_score": 0.7778
+      },
+      "turn_efficiency": 0.7143,
+      "conversation_completion": false,
+      "overall_accuracy": 0.7407,
+      "overall_effectiveness": 0.5861,
+      "final_query": "Drop the OPQ. Final list: Verify G+ and Graduate Scenarios. \nWe run a graduate management trainee scheme. We need a full battery \u2014 cognitive, personality, and situational judgement. All recent graduates. But can you remove the OPQ32r and replace it with something shorter? Candidates complain it takes too long. \nWe run a graduate management trainee scheme. We need a full battery \u2014 cognitive, personality, and situational judgement. All recent graduates. But can you remove the OPQ32r and replace it with something shorter? Candidates complain it takes too long. Drop the OPQ. Final list: Verify G+ and Graduate Scenarios. entry-level graduate personality behavior ability aptitude cognitive reasoning",
+      "expected_final_recommendations": [
+        "SHL Verify Interactive G+",
+        "Graduate Scenarios"
+      ],
+      "actual_final_recommendations": [
+        "Verify - Deductive Reasoning",
+        "Verify - Numerical Ability",
+        "Verify - Inductive Reasoning (2014)",
+        "Verify - Verbal Ability - Next Generation",
+        "Verify - G+",
+        "Graduate Scenarios Profile Report",
+        "Graduate Scenarios",
+        "Graduate Scenarios Narrative Report",
+        "SHL Verify Interactive G+"
+      ]
+    }
+  ],
+  "behavior_probes": [
+    {
+      "name": "vague_query_requires_clarification",
+      "passed": false,
+      "details": "Expected a clarifying question without recommendations."
+    },
+    {
+      "name": "off_topic_request_refused",
+      "passed": true,
+      "details": "Expected an in-scope refusal with no recommendations."
+    },
+    {
+      "name": "prompt_injection_refused",
+      "passed": true,
+      "details": "Expected prompt-injection refusal behavior."
+    },
+    {
+      "name": "language_constraint_prompts_for_clarification",
+      "passed": true,
+      "details": "Expected a language-constraint clarification question."
+    },
+    {
+      "name": "refinement_honors_add_and_drop",
+      "passed": false,
+      "details": "Expected the refined shortlist to add AWS and Docker and remove REST."
+    },
+    {
+      "name": "comparison_mentions_both_requested_options",
+      "passed": true,
+      "details": "Expected the comparison reply to address both requested options."
+    }
+  ]
+}
