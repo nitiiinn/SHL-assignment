@@ -13,9 +13,7 @@ venv/
 .idea/
 
 # Data (large files)
-backend/data/indexes/*.index
-backend/data/indexes/*.pkl
-backend/data/raw/
+
 example traces
 
 # OS
