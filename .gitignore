@@ -1,0 +1,23 @@
+# Environment
+.env
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Data (large files)
+backend/data/indexes/*.index
+backend/data/indexes/*.pkl
+backend/data/raw/
+example traces
+
+# OS
+.DS_Store
+Thumbs.db

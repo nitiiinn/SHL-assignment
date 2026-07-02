@@ -1,0 +1,21 @@
+# API
+fastapi
+uvicorn[standard]
+
+# LLM & Agent
+langgraph
+langchain-core
+langchain-groq
+
+# Retrieval
+faiss-cpu
+rank-bm25
+sentence-transformers
+
+# Scraping
+beautifulsoup4
+httpx
+
+# Utils
+pydantic
+python-dotenv
